@@ -1,4 +1,5 @@
 package ru.netology.services.hwcycle.services;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,14 +14,14 @@ public class VacationServiceTest {
 //            "2,100000,60000,150000"
 //    })
 
-    @CsvFileSource(files="src/test/resources/vacation.csv")
-    public void testPrimer1 (int expected, int income, int expenses, int threshold){
-        VacationService service=new VacationService();
+    @CsvFileSource(files = "src/test/resources/vacation.csv")
+    public void testPrimer1(int expected, int income, int expenses, int threshold) {
+        VacationService service = new VacationService();
 
         //int expected=3;
-        int actual= service.calcVacation(income, expected,threshold);
+        int actual = service.calcVacation(income, expected, threshold);
 
-       // Assertions.assertEquals(expected,actual);
+        // Assertions.assertEquals(expected,actual);
 
     }
 
